@@ -1,0 +1,4 @@
+venv/
+readings.db
+__pycache__/
+*.pem
