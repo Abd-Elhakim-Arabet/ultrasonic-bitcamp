@@ -7,8 +7,8 @@ if [ ! -d "venv" ]; then
 fi
 source venv/bin/activate
 
-# install flask
-pip install flask
+# install dependencies
+pip install flask RPi.GPIO
 
 # clean old database
 rm -f readings.db
