@@ -19,7 +19,7 @@ SENSOR_PID=$!
 
 # start web server
 echo "Sensor running (PID $SENSOR_PID)"
-echo "Open http://192.168.x.x:5000 in your browser"
+echo "Open http://ip:5000 in your browser"
 python3 app.py
 
 # cleanup on exit

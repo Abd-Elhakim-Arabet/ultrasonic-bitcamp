@@ -27,9 +27,10 @@ try:
         distance = (end - start) * 17150
         distance = round(distance, 1)
 
-        db.execute("INSERT INTO readings (timestamp, distance) VALUES (?, ?)", (time.time(), distance))
-        db.commit()
-        print(f"{distance:.1f} cm")
+        if distance <= 1000:
+            db.execute("INSERT INTO readings (timestamp, distance) VALUES (?, ?)", (time.time(), distance))
+            db.commit()
+            print(f"{distance:.1f} cm")
         time.sleep(0.5)
 
 except KeyboardInterrupt:
